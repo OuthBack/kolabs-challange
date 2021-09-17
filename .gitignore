@@ -9,7 +9,7 @@
 /build
 
 # misc
-.next
+/.next
 .vscode
 .DS_Store
 .env
