@@ -1,13 +1,12 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
-import light from "../styles/themes/default";
+import React from 'react';
+import type { AppProps } from 'next/app';
+import GlobalStyles from '../styles/globals';
+import { AppProvider } from '../hooks';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ThemeProvider theme={light}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
-}
-export default MyApp;
+const App = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <AppProvider>
+    <Component {...pageProps} />
+    <GlobalStyles />
+  </AppProvider>
+);
+export default App;
