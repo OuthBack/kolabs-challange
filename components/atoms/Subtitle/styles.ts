@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Span = styled.span`
-  color: ${(props) => props.theme.font.colors.grey200};
+  color: ${props => props.theme.font.colors.secundary};
 `;

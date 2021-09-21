@@ -1,7 +1,7 @@
-import React from "react";
-import { IChildren } from "../../types";
-import { Span } from "./styles";
+import React from 'react';
+import { IFontColorProps } from '../../types/components';
+import { Span } from './styles';
 
-export const Subtitle = ({ children }: IChildren) => {
-  return <Span>{children}</Span>;
-};
+export const Subtitle = ({ children, color }: IFontColorProps): JSX.Element => (
+  <Span color={color}>{children}</Span>
+);
