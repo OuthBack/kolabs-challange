@@ -1,7 +1,7 @@
-import React from "react";
-import { IChildren } from "../../types";
-import { Paragraph } from "./styles";
+import React from 'react';
+import { IFontColorProps } from '../../types/components';
+import { Paragraph } from './styles';
 
-export const Text = ({ children }: IChildren) => {
-  return <Paragraph>{children}</Paragraph>;
-};
+export const Text = ({ children, color }: IFontColorProps): JSX.Element => (
+  <Paragraph color={color}>{children}</Paragraph>
+);
