@@ -5,7 +5,7 @@ import {
   IFilterMovieListProps,
 } from '../../organisms/FilterMovieList';
 import { MovieList } from '../../organisms/MovieList';
-import { IMovie, TPromiseQuery } from '../../types/useSeachMovies';
+import { IMovie, TPromiseQuery } from '../../types/useSearchMovies';
 import { SearchContainer } from './styles';
 
 interface IProps extends IFilterMovieListProps {

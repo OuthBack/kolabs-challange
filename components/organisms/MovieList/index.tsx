@@ -1,6 +1,6 @@
 import React from 'react';
 import { MovieCard } from '../../molecules/MovieCard';
-import { IMovie } from '../../types/useSeachMovies';
+import { IMovie } from '../../types/useSearchMovies';
 import { MovieListContainer } from './styles';
 
 interface IProps {

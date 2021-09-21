@@ -1,7 +1,7 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { ISearchForm, TPromiseQuery } from '../../types/useSeachMovies';
+import { ISearchForm, TPromiseQuery } from '../../types/useSearchMovies';
 import { SearchBarContainer, SearchInput } from './styles';
 
 interface IProps {
