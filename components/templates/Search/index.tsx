@@ -5,32 +5,53 @@ import {
   IFilterMovieListProps,
 } from '../../organisms/FilterMovieList';
 import { MovieList } from '../../organisms/MovieList';
-import { IMovie, TPromiseQuery } from '../../types/useSearchMovies';
+import { IMovie } from '../../types/useSearchMovies';
 import { SearchContainer } from './styles';
 
 interface IProps extends IFilterMovieListProps {
   filterNames: string[];
+  filterSelected: number;
   title: string;
   tip: string;
-  movies: IMovie[];
+  movies: Set<IMovie>;
   error: Error | undefined;
-  searchMovies: TPromiseQuery;
+  // eslint-disable-next-line no-unused-vars
+  changeQuery: (queryValue: string) => void;
+  // eslint-disable-next-line no-unused-vars
+  changeFilter(newFilter: number): void;
+  loadNewMovies: () => void;
+  loading: boolean;
 }
 
 export const Search = ({
+  filterSelected,
   filterNames,
   title,
   tip,
   movies,
   error,
-  searchMovies,
+  changeQuery,
+  changeFilter,
+  loadNewMovies,
+  loading,
 }: IProps): JSX.Element => (
   <>
-    <SearchBar onSearch={searchMovies} />
+    <SearchBar onSearch={changeQuery} />
     <SearchContainer>
-      <FilterMovieList tip={tip} title={title} filterNames={filterNames} />
+      <FilterMovieList
+        filterSelected={filterSelected}
+        changeFilter={changeFilter}
+        tip={tip}
+        title={title}
+        filterNames={filterNames}
+      />
 
-      <MovieList movies={movies} error={error} />
+      <MovieList
+        loading={loading}
+        movies={movies}
+        loadNewMovies={loadNewMovies}
+        error={error}
+      />
     </SearchContainer>
   </>
 );
