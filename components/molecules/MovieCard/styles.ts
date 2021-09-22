@@ -17,7 +17,7 @@ export const MovieDetailsContainer = styled.div`
   flex-direction: column;
   gap: ${props => props.theme.spacing.margin.sm};
   height: 121px;
-  width: fit-content;
+  width: -webkit-fill-available;
   padding: ${props =>
     `${props.theme.spacing.padding.md} ${props.theme.spacing.padding.lg}`};
 
