@@ -14,7 +14,7 @@ const statusHandler = (result: { data: any; status: number }) => {
   }
 };
 
-export const search = async (
+export const queryMovies = async (
   query: string,
   page: number,
 ): Promise<IMovieSearchReturn> => {
@@ -28,7 +28,9 @@ export const search = async (
   return statusHandler(result);
 };
 
-export const popular = async (page: number): Promise<IMovieSearchReturn> => {
+export const popularMovies = async (
+  page: number,
+): Promise<IMovieSearchReturn> => {
   const result = await api.get<IMovieSearch>('/movie/popular', {
     params: {
       page,
