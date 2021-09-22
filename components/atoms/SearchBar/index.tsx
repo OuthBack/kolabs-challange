@@ -1,11 +1,12 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { ISearchForm, TPromiseQuery } from '../../types/useSearchMovies';
+import { ISearchForm } from '../../types/useSearchMovies';
 import { SearchBarContainer, SearchInput } from './styles';
 
 interface IProps {
-  onSearch: TPromiseQuery;
+  // eslint-disable-next-line no-unused-vars
+  onSearch: (queryValue: string) => void;
 }
 
 export const SearchBar = ({ onSearch }: IProps): JSX.Element => (
