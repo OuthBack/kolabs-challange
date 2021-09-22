@@ -34,6 +34,3 @@ interface IFormElements extends HTMLFormControlsCollection {
 export interface ISearchForm extends HTMLFormElement {
   readonly elements: IFormElements;
 }
-
-// eslint-disable-next-line no-unused-vars
-export type TPromiseQuery = (query: string) => Promise<void>;
